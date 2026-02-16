@@ -48,7 +48,7 @@ const RegisterUserPage = () => {
 
       </form>
       <p>Already an User?
-        <Link to="/login" className="text-blue-400">Login</Link>
+        <Link to="/login" className="text-blue-400">Log</Link>
       </p>
     </div>
   )
