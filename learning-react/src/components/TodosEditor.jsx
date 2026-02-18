@@ -23,9 +23,9 @@ const createTodo=  useTodoStore((state)=>(state.createTodos))
   }
 
   return (
-      <form onSubmit={handleTodoSubmission}>
-        <input value={todoText} onChange={handleTodoTextChange} type="text" />
-        <button type="submit">Add Todos</button>
+      <form className='flex ' onSubmit={handleTodoSubmission}>
+        <input className='rounded-2xl  border border-red-300 bg-red-50 text-black p-3 ' value={todoText} onChange={handleTodoTextChange} type="text" />
+        <button className='bg-red-500 rounded-2xl p-3 text-white' type="submit">Add Todos</button>
       </form>
   )
 }

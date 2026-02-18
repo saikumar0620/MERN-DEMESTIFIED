@@ -1,13 +1,16 @@
 import { useEffect } from 'react'
-import TodoApp from './components/TodoApp'
-import AppwriteAccount from './Appwrite/AppwriteAccount'
+import TodoApp from './components/TodoAppPages'
+import AppwriteAccount from './Appwrite-services/AppwriteAccount'
 import useUserStore from './stores/useUserStore';
-import { Link } from 'react-router';
+import {  Outlet, useNavigate } from 'react-router';
+import AppHeader from './components/AppHeader';
+
 
 
 function App() {
   const appWriteAccount = new AppwriteAccount();
   const setUser = useUserStore((state) => state.setUser)
+  const navigate = useNavigate();
 
   const getCurrentUser = async () => {
     try {
@@ -16,19 +19,21 @@ function App() {
       setUser(currentUser);
 
     } catch (error) {
-      console.error('error')
+      console.error(error);
+      navigate("/login")
     }
   }
   useEffect(() => {
     getCurrentUser();
   }, [])
   return (
-    <>
-     <nav>
-      <Link to="/profile">myProfile</Link>
-     </nav>
-     <h1>homepage</h1>
-    </>
+    <div>
+      <AppHeader/>
+    <main className='h-[92vh]'>
+      <Outlet/>
+    </main>
+
+    </div>
   )
 }
 

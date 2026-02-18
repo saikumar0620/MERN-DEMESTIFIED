@@ -6,7 +6,7 @@ const Homepage = () => {
     return()=>{console.log("unmounted")}
   },[])
   return (
-    <h1>Homepag</h1>
+    <h1>Homepage</h1>
   )
 }
 
