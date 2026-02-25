@@ -26,22 +26,22 @@ const RegisterUserPage = () => {
       const newuserResponse = await appwriteAccount.createNewUser(newUserData)
       if (newuserResponse?.$id) {
         navigate("/login")
-      
+
       }
       console.log(newuserResponse)
     } catch (error) {
-      toast.error('🦄 Wow so easy!', {
-position: "top-right",
-autoClose: 5000,
-hideProgressBar: false,
-closeOnClick: false,
-pauseOnHover: true,
-draggable: true,
-progress: undefined,
-theme: "light",
-transition: Bounce,
-});
-    
+      toast.error('successfully done', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+
 
     } finally {
       console.log("finally");

@@ -2,12 +2,20 @@
 import { useNavigate } from 'react-router';
 import useUserStore from '../stores/useUserStore'
 import AppwriteAccount from '../Appwrite-services/AppwriteAccount';
+import { useQuery } from '@tanstack/react-query';
+import{fetchAllTodos} from'../components/TodosListing.jsx'
 
 const ProfilePage = () => {
   const currentUser=useUserStore((state)=>state.user)
   console.log(currentUser)
   const navigate=useNavigate();
   const appWriteAccount=new AppwriteAccount();
+
+   const {data: todos, isLoading, isPending: isTodosPending, isFetching, error} = useQuery({
+        queryKey: ["todos"],
+        queryFn: fetchAllTodos
+    })
+    // console.log("profile page redered")
 
   const handleLogout=async()=>{
     try {

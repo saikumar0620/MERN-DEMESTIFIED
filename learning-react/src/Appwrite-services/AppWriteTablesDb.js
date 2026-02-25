@@ -1,11 +1,22 @@
 import appwriteClient from ".";
+import {  ID, TablesDB } from "appwrite";
 
 
-import {  TablesDB } from "appwrite";
+
 class AppWriteTablesDb {
     constructor() {
         this.tablesDb = new TablesDB(appwriteClient);
     }
+    async createTable(DbId,tableId,data) {
+        const newRecord = await this.tablesDb.createRow({
+              databaseId: DbId,
+              tableId: tableId,
+              rowId:ID.unique(),
+              data: data
+        });
+        return newRecord;
+    }
+
     async getAllRecords(DbId,TableId) {
         const allRecords = await this.tablesDb.listRows({
               databaseId: DbId,

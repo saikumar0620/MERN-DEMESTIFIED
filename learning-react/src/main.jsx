@@ -7,7 +7,7 @@ import ProfilePage from './pages/ProfilePage.jsx'
 import TodoAppPages from './components/TodoAppPages.jsx'
 import Loginpage from './pages/Loginpage.jsx'
 import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';    
+import 'react-toastify/dist/ReactToastify.css';
 
 import RegisterUserPage from './pages/registerUserPage.jsx'
 import Homepage from './pages/Homepage.jsx'
@@ -16,6 +16,12 @@ import Overview from './pages/Admin/Overview.jsx'
 import Admincourses from './pages/Admin/Admincourses.jsx'
 import AdminQuizes from './pages/Admin/AdminQuizes.jsx'
 import AdminTransactions from './pages/Admin/AdminTransactions.jsx'
+import { QueryClientProvider } from '@tanstack/react-query'
+import queryClient from './utils/queryClient.js'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import Counter from './pages/Admin/CounterPage.jsx'
+
+
 
 const router = createBrowserRouter([
   {
@@ -24,7 +30,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Homepage/>
+        element: <Homepage />
       },
       {
         path: "profile",
@@ -34,6 +40,11 @@ const router = createBrowserRouter([
         path: "todo",
         element: <TodoAppPages />
       },
+
+      {
+        path: "/counter",
+        element: <Counter />
+      }
     ]
   },
 
@@ -41,24 +52,24 @@ const router = createBrowserRouter([
   {
     path: "/admin-dashboard",
     element: <AdminDashBoardLayout />,
-      children:[
-        {
-          index:true,
-          element:<Overview/>
-        },
-        {
-         path:"courses",
-          element:<Admincourses/>
-        },
-        {
-         path:"quizes",
-          element:<AdminQuizes/>
-        },
-        {
-         path:"transactions",
-          element:<AdminTransactions/>
-        },
-      ]
+    children: [
+      {
+        index: true,
+        element: <Overview />
+      },
+      {
+        path: "courses",
+        element: <Admincourses />
+      },
+      {
+        path: "quizes",
+        element: <AdminQuizes />
+      },
+      {
+        path: "transactions",
+        element: <AdminTransactions />
+      },
+    ]
   },
   {
     path: "/register",
@@ -66,19 +77,20 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <Loginpage />
+    element: <Loginpage />,
   }
+
 
 ])
 
 const rootDiv = document.getElementById('root');
 createRoot(rootDiv).render(
   <>
-
-    <RouterProvider router={router} />
-    <ToastContainer />
-
-
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+      <ReactQueryDevtools initialIsOpen={false} />
+      <ToastContainer />
+    </QueryClientProvider>
   </>
 )
 

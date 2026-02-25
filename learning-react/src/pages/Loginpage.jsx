@@ -25,7 +25,7 @@ const Loginpage = () => {
       const loginResponse = await appwriteAccount.logInWithEmailAndPassword(loginData)
       console.log(loginResponse)
       navigate("/")
-      toast.error('user login successfully', {
+      toast.success('user login successfully', {
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
