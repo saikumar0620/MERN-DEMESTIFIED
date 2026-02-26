@@ -42,12 +42,31 @@ const AppHeader = () => {
           >
             Counter
           </Link>
-          <Link 
+          {/* <Link 
             to="/profile" 
-            className="rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-blue-600 shadow-sm ring-1 ring-slate-200 transition-all hover:bg-blue-50 active:scale-95"
+            className="rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-blue-500 shadow-sm ring-1 ring-slate-200 transition-all hover:bg-blue-50 active:scale-95"
           >
             Profile
-          </Link>
+          </Link> */}
+
+          <Link 
+  to="/profile" 
+  className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-white px-6 py-2.5 text-sm font-bold text-slate-700 shadow-md ring-1 ring-slate-200 transition-all duration-300 ease-out hover:text-blue-600 hover:shadow-lg hover:ring-blue-300 active:scale-95 active:shadow-inner"
+>
+  <span className="absolute inset-0 z-0 bg-gradient-to-r from-blue-50 to-indigo-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
+  
+  <span className="relative z-10 flex items-center gap-2">
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      viewBox="0 0 24 24" 
+      fill="currentColor" 
+      className="h-4 w-4 transition-transform duration-300 group-hover:rotate-12"
+    >
+      <path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clipRule="evenodd" />
+    </svg>
+    Profile
+  </span>
+</Link>
         </nav>
       </div>
 
@@ -70,7 +89,7 @@ const AppHeader = () => {
           </Link>
         ) : (
           <div className="h-8 w-8 rounded-full bg-gradient-to-tr from-blue-500 to-indigo-600 p-0.5 shadow-inner">
-             <div className="h-full w-full rounded-full bg-white transition-opacity hover:opacity-90" />
+             {/* <div className="h-full w-full rounded-full bg-white transition-opacity hover:opacity-90" /> */}
           </div>
         )}
       </div>
