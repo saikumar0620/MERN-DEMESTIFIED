@@ -42,6 +42,12 @@ const AppHeader = () => {
           >
             Counter
           </Link>
+          <Link 
+            to="/counters" 
+            className="rounded-full px-4 py-1.5 text-sm font-medium text-slate-600 transition-all hover:bg-white hover:text-blue-600 hover:shadow-sm active:scale-95"
+          >
+            Counters
+          </Link>
           {/* <Link 
             to="/profile" 
             className="rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-blue-500 shadow-sm ring-1 ring-slate-200 transition-all hover:bg-blue-50 active:scale-95"
@@ -84,8 +90,8 @@ const AppHeader = () => {
           <Link 
             to="/login" 
             className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-blue-500/25 transition-all hover:bg-blue-700 hover:shadow-blue-500/35 active:scale-[0.98]"
-          >
-            Sign In
+          >Sign In
+          
           </Link>
         ) : (
           <div className="h-8 w-8 rounded-full bg-gradient-to-tr from-blue-500 to-indigo-600 p-0.5 shadow-inner">

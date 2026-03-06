@@ -1,4 +1,4 @@
-import React from 'react'
+
 import PrimaryButton from '../components/Primarybutton'
 import { Link } from 'react-router'
 import AppwriteAccount from '../Appwrite-services/AppwriteAccount'

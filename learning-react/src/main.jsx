@@ -21,6 +21,10 @@ import queryClient from './utils/queryClient.js'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import Counter from './pages/Admin/CounterPage.jsx'
 
+import {Provider} from "react-redux"
+import { store } from './app/store.js'
+import Counters from './features/counter/Counter.jsx'
+// import App from './App.jsx'
 
 
 const router = createBrowserRouter([
@@ -44,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "/counter",
         element: <Counter />
+      },
+      {
+        path: "/counters",
+        element: <Counters />
       }
     ]
   },
@@ -86,8 +94,12 @@ const router = createBrowserRouter([
 const rootDiv = document.getElementById('root');
 createRoot(rootDiv).render(
   <>
-    <QueryClientProvider client={queryClient}>
+<QueryClientProvider client={queryClient}>
+  <Provider store={store}>
       <RouterProvider router={router} />
+  </Provider>
+  
+    
       <ReactQueryDevtools initialIsOpen={false} />
       <ToastContainer />
     </QueryClientProvider>

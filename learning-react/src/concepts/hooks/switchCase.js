@@ -8,6 +8,6 @@
         return "Default value";
     }
   }
-  switchCase("value1"); // Output: "Value 1"
-  switchCase("value2"); // Output: "Value 2"
-  switchCase("value3"); // Output: "Default value"
+  switchCase("value1"); 
+  switchCase("value2"); 
+  switchCase("value3"); 
