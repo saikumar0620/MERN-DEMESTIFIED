@@ -24,6 +24,9 @@ import Counter from './pages/Admin/CounterPage.jsx'
 import {Provider} from "react-redux"
 import { store } from './app/store.js'
 import Counters from './features/counter/Counter.jsx'
+import ProductPage from './pages/ProductPage.jsx'
+import CartPage from './pages/cartPage.jsx'
+
 // import App from './App.jsx'
 
 
@@ -52,6 +55,14 @@ const router = createBrowserRouter([
       {
         path: "/counters",
         element: <Counters />
+      },
+      {
+        path: "/products",
+        element: <ProductPage />
+      },
+      {
+        path: "/cart",
+        element: <CartPage />
       }
     ]
   },

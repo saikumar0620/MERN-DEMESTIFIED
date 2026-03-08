@@ -48,12 +48,20 @@ const AppHeader = () => {
           >
             Counters
           </Link>
-          {/* <Link 
-            to="/profile" 
-            className="rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-blue-500 shadow-sm ring-1 ring-slate-200 transition-all hover:bg-blue-50 active:scale-95"
+          <Link 
+            to="/products" 
+            className="rounded-full px-4 py-1.5 text-sm font-medium text-slate-600 transition-all hover:bg-white hover:text-blue-600 hover:shadow-sm active:scale-95"
           >
-            Profile
-          </Link> */}
+            products
+          </Link>
+          
+          <Link 
+            to="/cart" 
+            className="rounded-full px-4 py-1.5 text-sm font-medium text-slate-600 transition-all hover:bg-white hover:text-blue-600 hover:shadow-sm active:scale-95"
+          >
+            My cart
+          </Link>
+          
 
           <Link 
   to="/profile" 
