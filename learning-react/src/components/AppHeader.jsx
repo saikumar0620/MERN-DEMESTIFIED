@@ -19,7 +19,7 @@ const AppHeader = () => {
           className="group flex items-center gap-2 text-xl font-black tracking-tight"
         >
           <span className="bg-gradient-to-br from-blue-600 via-blue-500 to-indigo-600 bg-clip-text text-transparent transition-opacity group-hover:opacity-80">
-            St. Learner
+            St. MERN 
           </span>
         </Link>
 

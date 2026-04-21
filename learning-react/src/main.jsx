@@ -105,16 +105,16 @@ const router = createBrowserRouter([
 const rootDiv = document.getElementById('root');
 createRoot(rootDiv).render(
   <>
-<QueryClientProvider client={queryClient}>
-  <Provider store={store}>
-      <RouterProvider router={router} />
-  </Provider>
+    <QueryClientProvider client={queryClient}>
+      <Provider store={store}>
+        <RouterProvider router={router} />
+      </Provider>
   
     
       <ReactQueryDevtools initialIsOpen={false} />
       <ToastContainer />
     </QueryClientProvider>
   </>
-)
+);
 
 

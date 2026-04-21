@@ -47,7 +47,8 @@ const ProfilePage = () => {
 //     </div>
 
 //     <button 
-//       className="w-full py-2.5 px-6 text-sm font-medium text-white bg-red-600 rounded-lg transition-all duration-200 hover:bg-red-700 hover:shadow-md active:scale-95 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2" 
+//       className="w-full py-2.5 px-6 text-sm font-medium text-white bg-red-600 rounded-lg transition-all duration-200 
+//      hover:bg-red-700 hover:shadow-md active:scale-95 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2" 
 //       onClick={handleLogout}
 //     >
 //       Logout

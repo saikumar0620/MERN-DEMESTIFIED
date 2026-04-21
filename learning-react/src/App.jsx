@@ -29,7 +29,7 @@ function App() {
   return (
     <div>
       <AppHeader/>
-    <main className='h-[92vh]'>
+    <main className='h-[92vh] bg-red-500'>
       <Outlet/>
     </main>
 
@@ -37,4 +37,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

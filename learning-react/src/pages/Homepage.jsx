@@ -1,13 +1,15 @@
 import React from 'react'
+import { useEffect } from 'react'
+
 
 const Homepage = () => {
-  React.useEffect(()=>{
-
+  // also use useeffect import as react.useEffect and use it
+  // React.
+  
+    useEffect(() => {
     return()=>{console.log("unmounted")}
   },[])
-  // return (
-  //   <h1>Homepage</h1>
-  // )
+ 
   return (
   <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center px-6">
     <div className="max-w-4xl text-center">
