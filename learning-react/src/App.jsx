@@ -29,7 +29,7 @@ function App() {
   return (
     <div>
       <AppHeader/>
-    <main className='h-[92vh] bg-red-500'>
+    <main className='h-[92vh] '>
       <Outlet/>
     </main>
 
